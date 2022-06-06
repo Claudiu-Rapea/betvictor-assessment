@@ -26,9 +26,9 @@ public class ConsumerService {
         persistMessage(payload);
     }
 
-    private void persistMessage(String payload) {
+    private void persistMessage(String message) {
         MessageEntity messageEntity = new MessageEntity();
-        messageEntity.setContent(payload);
+        messageEntity.setContent(message);
         log.info("Save message to the database");
         repository.save(messageEntity);
     }
